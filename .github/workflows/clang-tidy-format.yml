@@ -23,15 +23,25 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Cache Clang
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
         
       - name: Install Clang
         uses: egor-tensin/setup-clang@v1
+        with:
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          clang-tidy *.cpp *.hpp *.h
-          clang-format *.cpp *.hpp *.h
+          for file in `find . -name '*.h' -or -name '*.cpp' -or -name '*.hpp'`
+          do
+            echo 'clang-tidy checking...' && clang-tidy $file
+            echo 'clang-format checking...' && diff $file <(clang-format $file)
+          done
