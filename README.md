@@ -5,6 +5,10 @@
 - [Полезные ссылки](#полезные-ссылки)
 - [Таблица с результатами](https://docs.google.com/spreadsheets/d/1stlHqG1o7f2N1gPj7SgvM253V6KVPlMteuiUVfbnfjk/edit#gid=1167867899)
 
+# Полезные ссылки
+- [cppreference](https://en.cppreference.com/w/)
+- [C++23 Working Draft N4928](https://isocpp.org/files/papers/N4928.pdf)
+
 # Начало работы
 Необходимо создать репозиторий, в который вы будете коммитить свои решения. Чтобы его создать, можно выполнить следующие шаги:
 1) Его можно создать использовав текущий template repository. \
@@ -43,7 +47,3 @@ git push -u origin <task_name>
 5) Убеждаемся, что CI отработало успешно, добавляем в *Reviewers* ассистента и ждем фидбек. Не забываем добавить ассистента в коллабораторы репозитория, если его там нет
 
 6) После поправок коммитим изменения в ту же ветку и запрашиваем повторное *review*
-
-# Полезные ссылки
-- [cppreference](https://en.cppreference.com/w/)
-- [C++23 Working Draft N4928](https://isocpp.org/files/papers/N4928.pdf)
