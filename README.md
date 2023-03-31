@@ -29,7 +29,7 @@ git remote add upstream git@github.com:ReviewerBelovMax/mipt-cpp-course.git
 Каждый раз, приступая к новой задаче/продолжая решение текущей рекомендуется подтягивать обновления (предварительно сохранив все незакоммиченные изменения с помощью git commit или git stash push):
 ```
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 ```
 
 # Как сдавать задачи
