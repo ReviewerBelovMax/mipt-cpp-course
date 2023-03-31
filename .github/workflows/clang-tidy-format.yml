@@ -18,8 +18,4 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          for file in `find . -name '*.h' -or -name '*.cpp' -or -name '*.hpp'`
-          do
-            echo 'clang-tidy checking...' && clang-tidy $file
-            echo 'clang-format checking...' && diff $file <(clang-format $file)
-          done
+          ./format-check.sh
