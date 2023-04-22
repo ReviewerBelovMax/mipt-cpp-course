@@ -16,3 +16,6 @@ set(CMAKE_CXX_CLANG_TIDY clang-tidy-14)
 
 add_executable(deque deque/deque_test_23.cpp)
 add_executable(list list/stackallocator_test.cpp)
+add_executable(unordered_map unordered_map/unordered_map_test.cpp)
+add_executable(shared_ptr shared_ptr/smart_pointers_test.cpp)
+add_executable(variant variant/variant_test.cpp)
