@@ -14,8 +14,11 @@ add_link_options(-stdlib=libc++)
 
 set(CMAKE_CXX_CLANG_TIDY clang-tidy-14)
 
-add_executable(deque deque/deque_test_23.cpp)
-add_executable(list list/stackallocator_test.cpp)
-add_executable(unordered_map unordered_map/unordered_map_test.cpp)
-add_executable(shared_ptr shared_ptr/smart_pointers_test.cpp)
-add_executable(variant variant/variant_test.cpp)
+file(GLOB sum_product_sources ${PROJECT_SOURCE_DIR}/tasks/01-sum-product/*.cpp)
+add_executable(sum_product ${sum_product_sources})
+
+file(GLOB stack_sources ${PROJECT_SOURCE_DIR}/tasks/02-stack/*.cpp)
+add_executable(stack ${stack_sources})
+
+file(GLOB string_sources ${PROJECT_SOURCE_DIR}/tasks/03-string/*.cpp)
+add_executable(string_sources ${string_sources})
