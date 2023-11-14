@@ -14,11 +14,11 @@ add_link_options(-stdlib=libc++)
 
 set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
-file(GLOB sum_product_sources ${PROJECT_SOURCE_DIR}/tasks/01-sum-product/*.cpp)
+file(GLOB sum_product_sources ${PROJECT_SOURCE_DIR}/01-sum-product/*.cpp)
 add_executable(sum_product ${sum_product_sources})
 
-file(GLOB stack_sources ${PROJECT_SOURCE_DIR}/tasks/02-stack/*.cpp)
+file(GLOB stack_sources ${PROJECT_SOURCE_DIR}/02-stack/*.cpp)
 add_executable(stack ${stack_sources})
 
-file(GLOB string_sources ${PROJECT_SOURCE_DIR}/tasks/03-string/*.cpp)
+file(GLOB string_sources ${PROJECT_SOURCE_DIR}/03-string/*.cpp)
 add_executable(string ${string_sources})
