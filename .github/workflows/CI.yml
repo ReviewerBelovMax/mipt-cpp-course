@@ -20,9 +20,9 @@ jobs:
 
       - name: clang-format
         run: |
-          for file in `find . -name '*.h'`
+          for file in `find . -name '*.?pp'`
           do
-            echo 'clang-format checking...' && diff $file <(clang-format $file)
+            echo 'clang-format checking ' ${file} && diff $file <(clang-format $file)
           done
 
       - name: Build tests
@@ -35,8 +35,6 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          ./deque
-          ./list
-          ./unordered_map
-          ./shared_ptr
-          ./variant
+          ./sum_product
+          ./stack
+          ./string
