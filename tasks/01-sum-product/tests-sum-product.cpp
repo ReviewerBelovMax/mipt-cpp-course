@@ -4,5 +4,4 @@
 #include "sum-product.hpp"
 
 int main() {
-    
 }
