@@ -3,7 +3,6 @@
 - [Начало работы](#начало-работы)
 - [Формат сдачи задач](#как-сдавать-задачи)
 - [Полезные ссылки](#полезные-ссылки)
-- [Таблица с результатами](https://docs.google.com/spreadsheets/d/1stlHqG1o7f2N1gPj7SgvM253V6KVPlMteuiUVfbnfjk/edit#gid=1167867899)
 
 # Полезные ссылки
 - [cppreference](https://en.cppreference.com/w/)
